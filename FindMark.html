@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Third highest mark</title>
+</head>
+<body>
+<script>
+  function thirdHighest(arr){
+      for (let i = 0; i < arr.length; i++) {
+          for (let j = i + 1; j < arr.length; j++) {
+              if (arr[i] > arr[j]) {
+                  temp = arr[i];
+                  arr[i] = arr[j];
+                  arr[j] = temp;
+              }
+          }
+      }
+      console.log(arr[arr.length-3])
+  }
+  thirdHighest([4,8,7,3,9,10])
+
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="canvas" width="500" height="500" style="border: 1px solid"></canvas>
+<script>
+  class rect{
+    x;
+    y;
+    width;
+    height;
+    color;
+    render(){
+      let ctx = document.getElementById('canvas').getContext('2d')
+      ctx.beginPath()
+      ctx.fillRect(this.x, this.y, this.width,this.height)
+      ctx.fillStyle(this.color)
+      ctx.closePath()
+    }
+  }
+
+  let rect1 = new rect
+  rect1.x = 10
+  rect1.y = 10
+  rect1.width = 200
+  rect1.height = 100
+  rect1.color = '#000000'
+  rect1.render()
+</script>
+</body>
+</html>
